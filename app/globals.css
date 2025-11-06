@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+html, body { height: 100%; }
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+.prose-invert :where(code):not(:where([class~="not-prose"] *)) {
+  @apply text-foreground;
+}
+

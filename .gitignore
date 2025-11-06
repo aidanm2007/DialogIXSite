@@ -1,0 +1,19 @@
+# Node/Next
+node_modules
+.next
+.vercel
+.turbo
+dist
+out
+coverage
+*.log
+pnpm-lock.yaml
+npm-debug.log*
+yarn-error.log*
+.DS_Store
+
+# Env
+.env
+.env.local
+.env.*.local
+
