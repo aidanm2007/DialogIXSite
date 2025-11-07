@@ -17,37 +17,57 @@ const config: Config = {
     },
     extend: {
       colors: {
-        background: "#0b0d10",
-        foreground: "#e6e6f0",
+        background: "#0B0B0C",
+        foreground: "#F4F1EB",
+        surface: {
+          800: "#111113",
+          700: "#16171A",
+        },
         muted: {
-          DEFAULT: "#0f1115",
-          foreground: "#9aa0a6",
+          DEFAULT: "#1B1C1F",
+          foreground: "#9FA6B7",
         },
         card: {
-          DEFAULT: "#0d0f13",
-          foreground: "#e6e6f0",
+          DEFAULT: "#121316",
+          foreground: "#F4F1EB",
         },
         accent: {
-          DEFAULT: "#5b7cfd",
-          foreground: "#0b0d10",
+          DEFAULT: "#7C8AA6",
+          foreground: "#0B0B0C",
         },
+        gold: {
+          DEFAULT: "#C7A86A",
+          600: "#B89359",
+          700: "#997740",
+        },
+        success: "#58B099",
+        danger: "#E16F6F",
         neon: {
-          from: "#7c4dff",
-          to: "#00e5ff",
+          from: "#C7A86A",
+          to: "#7C8AA6",
         },
-        border: "#1b2230",
-        input: "#1b2230",
+        border: "#1F222A",
+        input: "#222530",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+        serif: ["var(--font-playfair)", "Playfair Display", "serif"],
       },
       borderRadius: {
-        lg: "14px",
+        lg: "1rem",
+        xl: "1.5rem",
+        "2xl": "2rem",
+        "3xl": "2.5rem",
       },
       boxShadow: {
-        glass: "0 1px 0 rgba(255,255,255,0.06) inset, 0 8px 30px rgba(0,0,0,0.35)",
+        glass: "0 1px 0 rgba(255,255,255,0.04) inset, 0 8px 30px rgba(0,0,0,0.4)",
+        soft: "0 30px 60px rgba(0, 0, 0, 0.45)",
+        glow: "0 0 40px rgba(199, 168, 106, 0.25)",
       },
       backgroundImage: {
-        "grid":
+        grid:
           "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
-        "neon": "linear-gradient(135deg, #7c4dff, #00e5ff)",
+        neon: "linear-gradient(135deg, #C7A86A, #7C8AA6)",
       },
       backgroundSize: {
         grid: "42px 42px",

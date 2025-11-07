@@ -6,8 +6,8 @@ export function KPIStrip() {
   return (
     <div className="grid gap-4 sm:grid-cols-3">
       {kpis.map((k) => (
-        <div key={k.label} className="rounded-lg border border-white/10 bg-card/60 p-4 text-center">
-          <div className="text-3xl font-semibold">
+        <div key={k.label} className="card p-6 text-center">
+          <div className="text-3xl font-semibold text-gold">
             <Counter target={k.value} suffix={k.suffix} />
           </div>
           <div className="mt-1 text-sm text-muted-foreground">{k.label}</div>

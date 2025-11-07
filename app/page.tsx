@@ -15,7 +15,9 @@ export default function Page() {
         <LogoRow />
       </Section>
       <Section>
-        <div className="mb-6 text-center text-xl font-semibold">Capture • Qualify • Schedule • Sync</div>
+        <div className="mb-6 text-center text-xl font-serif uppercase tracking-[0.4em] text-gold">
+          Capture{" \u2022 "}Qualify{" \u2022 "}Schedule{" \u2022 "}Sync
+        </div>
         <Pillars />
       </Section>
       <Section>
@@ -27,4 +29,3 @@ export default function Page() {
     </div>
   );
 }
-

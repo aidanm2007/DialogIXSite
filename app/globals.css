@@ -2,14 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: dark; }
+:root {
+  color-scheme: dark;
+  --lux-background: #0b0b0c;
+  --lux-surface-800: #111113;
+  --lux-surface-700: #16171a;
+  --lux-border: #1f222a;
+  --lux-foreground: #f4f1eb;
+  --lux-muted: #9fa6b7;
+  --lux-gold: #c7a86a;
+  --lux-gold-600: #b89359;
+  --lux-gold-700: #997740;
+  --lux-accent: #7c8aa6;
+  --lux-success: #58b099;
+  --lux-danger: #e16f6f;
+}
 
 html, body { height: 100%; }
 body {
-  @apply bg-background text-foreground antialiased;
+  @apply bg-background text-foreground antialiased tracking-tight;
 }
 
 .prose-invert :where(code):not(:where([class~="not-prose"] *)) {
   @apply text-foreground;
+}
+
+@layer base {
+  ::selection {
+    @apply bg-gold/30 text-foreground;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-3xl border border-white/10 bg-surface-800/80 shadow-soft backdrop-blur;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full border border-transparent px-6 py-2 text-sm font-semibold tracking-wide transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  .btn-primary {
+    @apply btn border-gold/40 bg-gradient-to-r from-gold via-gold-600 to-gold-700 text-background shadow-glow hover:from-gold-600 hover:via-gold hover:to-gold-600;
+  }
+
+  .btn-ghost {
+    @apply btn border-transparent bg-transparent text-foreground hover:border-gold/30 hover:bg-surface-700/60;
+  }
+
+  .input {
+    @apply w-full rounded-2xl border border-white/10 bg-surface-700/70 px-4 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30;
+  }
 }
 
