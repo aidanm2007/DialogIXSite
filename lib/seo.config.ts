@@ -1,18 +1,21 @@
-import { DefaultSeoProps } from "next-seo";
+import type { Metadata } from "next";
 
-const config: DefaultSeoProps = {
-  titleTemplate: "%s | Dialog IX",
-  defaultTitle: "Dialog IX",
-  description: "Dialog IX — AI-native customer dialogue, on autopilot.",
+const siteMetadata: Metadata = {
+  title: {
+    default: "Dialog IX",
+    template: "%s | Dialog IX",
+  },
+  description: "Dialog IX - AI-native customer dialogue, on autopilot.",
   openGraph: {
+    title: "Dialog IX",
+    description: "Dialog IX - AI-native customer dialogue, on autopilot.",
     type: "website",
     siteName: "Dialog IX",
   },
   twitter: {
-    cardType: "summary_large_image",
-    handle: "@dialogix",
+    card: "summary_large_image",
+    creator: "@dialogix",
   },
 };
 
-export default config;
-
+export default siteMetadata;

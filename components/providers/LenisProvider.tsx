@@ -9,7 +9,6 @@ export function LenisProvider({ children }: { children: React.ReactNode }) {
 
     const lenis = new Lenis({
       smoothWheel: true,
-      smoothTouch: false,
       lerp: 0.08,
     });
 
